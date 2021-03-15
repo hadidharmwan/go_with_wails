@@ -2,6 +2,7 @@ package main
 
 import (
   "github.com/leaanthony/mewn"
+  "https://github.com/hadidharmwan/go_with_wails/tree/main/pkg/sys"
   "github.com/wailsapp/wails"
 )
 
@@ -14,14 +15,16 @@ func main() {
   js := mewn.String("./frontend/dist/app.js")
   css := mewn.String("./frontend/dist/app.css")
 
+  stats := &sys.Stats{}
+
   app := wails.CreateApp(&wails.AppConfig{
-    Width:  1024,
-    Height: 768,
-    Title:  "cpu",
+    Width:  512,
+    Height: 512,
+    Title:  "CPU Usage",
     JS:     js,
     CSS:    css,
     Colour: "#131313",
   })
-  app.Bind(basic)
+  app.Bind(stats)
   app.Run()
 }
