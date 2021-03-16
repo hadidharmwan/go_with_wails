@@ -14,7 +14,11 @@ export default {
          };
       },
       mounted: function(){
-          
+          wails.Events.on("cpu_usage", cpu_usage => {
+              if (cpu_usage) {
+                  this.series = [cpu_usage.avg];
+              }
+          });
       }
-    }
+    };
 </script>
