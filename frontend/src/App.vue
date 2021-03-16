@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import HelloWorld from "./components/CPUUsage.vue";
+import CPUUsage from "./components/CPUUsage.vue";
 import "./assets/css/main.css";
 
 export default {
