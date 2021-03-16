@@ -2,7 +2,7 @@ package main
 
 import (
   "github.com/leaanthony/mewn"
-  "https://github.com/hadidharmwan/go_with_wails/tree/main/pkg/sys"
+  "github.com/hadidharmwan/go_with_wails/tree/main/pkg/sys"
   "github.com/wailsapp/wails"
 )
 
