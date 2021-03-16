@@ -10,10 +10,16 @@ Vue.component('apexchart', VueApexCharts)
 Vue.config.productionTip = false;
 Vue.config.devtools = true;
 
-import * as Wails from '@wailsapp/runtime';
+import Bridge from './wailsbridge';
+// import * as Wails from '@wailsapp/runtime';
 
-Wails.Init(() => {
+// Wails.Init(() => {
+// 	new Vue({
+// 		render: h => h(App)
+// 	}).$mount('#app');
+// });
+Bridge.Start(() => {
 	new Vue({
 		render: h => h(App)
-	}).$mount('#app');
+	}).$mount("#app");
 });
